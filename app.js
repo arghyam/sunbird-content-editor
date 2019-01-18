@@ -11,12 +11,12 @@ http.globalAgent.maxSockets = 100000;
 var app = express();
 
 // all environments
-app.set('port', 3000);
+app.set('port', 3001);
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json({limit: '50mb'}))
 app.use(express.static(path.join(__dirname, '.')));
 
-app.use('/assets/public', proxy('dev.ekstep.in', {
+app.use('/assets/public', proxy('staging.open-sunbird.org', {
     https: true,
 	proxyReqPathResolver: function(req) {
     	return "/assets/public" + urlHelper.parse(req.url).path;

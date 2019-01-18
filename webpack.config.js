@@ -1,7 +1,7 @@
 const ENVIRONMENT = process.env.NODE_ENV;
-const BUILD_NUMBER = process.env.build_number;
-const EDITOR_VER = process.env.editor_version_number;
-const PLUGIN_FRAMEWORK_VER = process.env.framework_version_number;
+const BUILD_NUMBER = process.env.build_number || 1;
+const EDITOR_VER = process.env.editor_version_number || 1;
+const PLUGIN_FRAMEWORK_VER = process.env.framework_version_number || 1;
 
 const ZIP_FILE_NAME = 'content-editor.zip';
 
@@ -149,7 +149,7 @@ module.exports = {
                     multiple: [
                         { search: '/plugins', replace: '/content-plugins' },
                         { search: "/api", replace: '/action' },
-                        { search: 'https://dev.ekstep.in', replace: '' },
+                        { search: 'https://staging.open-sunbird.org', replace: '' },
                         { search: 'dispatcher: "local"', replace: 'dispatcher: "console"' }
                     ],
                     strict: true
@@ -220,11 +220,11 @@ module.exports = {
                         loader: 'css-loader',
                         options: {
                             sourceMap: false,
-                            minimize: true,
-                            "preset": "advanced",
-                            discardComments: {
-                                removeAll: true
-                            }
+                            // minimize: true,
+                            // "preset": "advanced",
+                            // discardComments: {
+                            //     removeAll: true
+                            // }
                         }
                     },
                     {
