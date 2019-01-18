@@ -1,17 +1,17 @@
 org.ekstep.contenteditor.config = {
-    baseURL: 'https://staging.open-sunbird.org',
-    apislug: '/action',
+    baseURL: '',
+    apislug: '/action',    
     build_number: 'BUILDNUMBER',
-    pluginRepo: '/plugins',
-    aws_s3_urls: ["https://s3.ap-south-1.amazonaws.com/ekstep-public-dev/", "https://ekstep-public-dev.s3-ap-south-1.amazonaws.com/"],
+    googleAPIKey: 'AIzaSyDQm7nYT3TwiLSOvy46PFBrEFReKGONzxg',
+    pluginRepo: '/content-plugins',
+    aws_s3_urls: ["https://ekstep-public-prod.s3-ap-south-1.amazonaws.com/"],
     plugins: [
         { "id": "org.ekstep.developer", "ver": "1.0", "type": "plugin" },
         { "id": "org.ekstep.sunbirdcommonheader", "ver": "1.4", "type": "plugin" },       
         { "id": "org.ekstep.review", "ver": "1.0", "type": "plugin" },
         { "id": "org.ekstep.preview", "ver": "1.1", "type": "plugin" },
         { "id": "org.ekstep.editcontentmeta", "ver": "1.1", "type": "plugin" },
-        { "id": "org.ekstep.quiz", "ver": "1.1", "type": "plugin" },
-        { "id": "org.ekstep.textBorder", "ver": "1.0", "type": "plugin" }
+        { "id": "org.ekstep.quiz", "ver": "1.1", "type": "plugin" }
     ],
     corePluginsPackaged: true,
     dispatcher: "local",

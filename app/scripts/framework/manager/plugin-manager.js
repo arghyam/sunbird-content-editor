@@ -23,8 +23,7 @@ org.ekstep.pluginframework.pluginManager = new(Class.extend({
         repo = repo || org.ekstep.pluginframework.publishedRepo
 		if (manifest.id === 'org.ekstep.readalongbrowser' ||
         manifest.id === 'org.ekstep.video' || 
-        //  manifest.id === 'org.ekstep.assetbrowser' ||
-        // manifest.id === 'org.ekstep.sunbirdcommonheader' ||
+         manifest.id === 'org.ekstep.assetbrowser' ||
         manifest.id === 'org.ekstep.uploadcontent') {
 			this._registerPlugin(manifest.id, manifest.ver, plugin, manifest, org.ekstep.pluginframework.forwaterRepo)
 			console.log('calling from forwater s3 repo: ', manifest.id)

@@ -11,6 +11,7 @@
         "express": "^4.14.0",
         "express-http-proxy": "*",
         "lodash": "^4.16.6",
+        "promise": "^8.0.2",
         "request": "*",
         "xmlbuilder": "*"
     },

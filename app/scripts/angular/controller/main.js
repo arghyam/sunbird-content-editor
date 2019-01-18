@@ -8,7 +8,7 @@ angular.module('editorApp', ['ngDialog', 'oc.lazyLoad', 'Scope.safeApply']).fact
         request : function(config) {
             config.alreadyCached = $templateCache.get(config.url);
             if (!config.alreadyCached) {
-                config.url = config.url + '?' + ecEditor.getConfig('build_number');
+                config.url = config.url.indexOf('drive.google.com') === -1 ? config.url :  + '?' + ecEditor.getConfig('')
             }
             return config;
         }
