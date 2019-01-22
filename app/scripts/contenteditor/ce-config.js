@@ -4,7 +4,7 @@ org.ekstep.contenteditor.config = {
     build_number: 'BUILDNUMBER',
     googleAPIKey: 'AIzaSyDQm7nYT3TwiLSOvy46PFBrEFReKGONzxg',
     pluginRepo: '/content-plugins',
-    aws_s3_urls: ["https://ekstep-public-prod.s3-ap-south-1.amazonaws.com/"],
+    aws_s3_urls: ["https://s3.ap-south-1.amazonaws.com/ekstep-public-dev/", "https://ekstep-public-dev.s3-ap-south-1.amazonaws.com/"],
     plugins: [
         { "id": "org.ekstep.developer", "ver": "1.0", "type": "plugin" },
         { "id": "org.ekstep.sunbirdcommonheader", "ver": "1.4", "type": "plugin" },       
