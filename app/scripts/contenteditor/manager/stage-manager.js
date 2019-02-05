@@ -398,7 +398,7 @@ org.ekstep.contenteditor.stageManager = new(Class.extend({
         }
 
         var stageInstance = org.ekstep.contenteditor.api.instantiatePlugin(org.ekstep.contenteditor.config.corePluginMapping['stage'], stage);
-        // stageInstance.setCanvas(canvas);
+        stageInstance.setCanvas(canvas);
         var pluginCount = 0;
         var props = _.pickBy(stage, _.isObject);
         var plugins = [];

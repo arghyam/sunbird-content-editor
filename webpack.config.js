@@ -149,7 +149,7 @@ module.exports = {
                     multiple: [
                         { search: '/plugins', replace: '/content-plugins' },
                         { search: "/api", replace: '/action' },
-                        { search: 'https://staging.open-sunbird.org', replace: '' },
+                        { search: 'https://dev.ekstep.in', replace: '' },
                         { search: 'dispatcher: "local"', replace: 'dispatcher: "console"' }
                     ],
                     strict: true
