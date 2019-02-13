@@ -26,7 +26,7 @@ var corePlugins = [
     "org.ekstep.editorstate-1.0",
     "org.ekstep.contenteditorfunctions-1.2",
     "org.ekstep.keyboardshortcuts-1.0",
-    "org.ekstep.richtext-1.1",
+    "org.ekstep.richtext-1.2",
     "org.ekstep.iterator-1.0",
     "org.ekstep.navigation-1.0"
 ];
