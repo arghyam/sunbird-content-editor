@@ -14,9 +14,9 @@ var merge = require('merge-stream');
 var cleanCSS = require('clean-css');
 var replace = require('gulp-string-replace');
 var uglify = require('gulp-uglify');
-var frameworkVersionNumber = process.env.framework_version_number;
-var editorVersionNumber = process.env.editor_version_number;
-var buildNumber = process.env.build_number;
+var frameworkVersionNumber = process.env.framework_version_number || 1;
+var editorVersionNumber = process.env.editor_version_number || 1;
+var buildNumber = process.env.build_number || 1;
 
 if (!editorVersionNumber && !buildNumber && !frameworkVersionNumber) {
     console.error('Error!!! Cannot find framework_version_number, editor_version_number and build_number env variables');
@@ -344,9 +344,19 @@ gulp.task('zipDev', ['minifyDev', 'injectDev'], function() {
 gulp.task('buildDev', ['minifyDev', 'injectDev', 'zipDev', "cachebust"]);
 
 var corePlugins = [
+    "org.ekstep.stage-1.0",   
+    "org.ekstep.stageconfig-1.0",
     "org.ekstep.colorpicker-1.0",
     "org.ekstep.config-1.0",
+    "org.ekstep.text-1.2",
+    "org.ekstep.shape-1.0",
+    "org.ekstep.image-1.1",
+    "org.ekstep.audio-1.1",
+    "org.ekstep.hotspot-1.0",
+    "org.ekstep.scribblepad-1.0",
     "org.ekstep.readalongbrowser-1.0",
+    "org.ekstep.video-1.0",
+    "org.ekstep.assetbrowser-1.2"
 ];
 
 gulp.task('minifyCorePlugins', function() {

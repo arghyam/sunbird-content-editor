@@ -21,7 +21,9 @@ org.ekstep.pluginframework.pluginManager = new(Class.extend({
     },
     registerPlugin: function(manifest, plugin, repo) {
         repo = repo || org.ekstep.pluginframework.publishedRepo;
-        this._registerPlugin(manifest.id, manifest.ver, plugin, manifest, repo);        
+      
+			this._registerPlugin(manifest.id, manifest.ver, plugin, manifest, repo)
+		        
     },
     loadCustomPlugin: function(dependency, callback, publishedTime) {
         var instance = this;
@@ -146,16 +148,25 @@ org.ekstep.pluginframework.pluginManager = new(Class.extend({
                 callback && callback(); 
             } else {
                 instance.loadManifestDependencies(data.manifest.dependencies, publishedTime, parents, function() {
+                    // if(data.manifest.id === 'org.ekstep.sunbirdmetadata' || data.manifest.id ==='org.ekstep.libs.ckeditor') {
+                    //     data.repo = org.ekstep.pluginframework.forwaterRepo;
+                    // }
                     if (!data.manifest.editor || Object.keys(data.manifest.editor).length === 0) {
                         instance.pluginManifests[data.manifest.id] = { m: data.manifest, repo: data.repo };                        
                     }                    
                     var queue = instance.queueDependencies(data.manifest, data.repo, publishedTime, parents);
                     if (queue.length() > 0) {
                         queue.drain = function() {
+                            // if (data.manifest.id === 'org.ekstep.sunbirdmetadata' || data.manifest.id === 'org.ekstep.libs.ckeditor') {
+                            //     data.repo = org.ekstep.pluginframework.forwaterRepo;
+                            // }
                             instance.loadPluginByManifest(data.manifest, data.repo, pluginType, publishedTime);
                             callback && callback();
                         };
                     } else {
+                        // if (data.manifest.id === 'org.ekstep.sunbirdmetadata' || data.manifest.id === 'org.ekstep.libs.ckeditor') {
+                        //     data.repo = org.ekstep.pluginframework.forwaterRepo;
+                        // }
                         instance.loadPluginByManifest(data.manifest, data.repo, pluginType, publishedTime);
                         callback && callback();
                     }

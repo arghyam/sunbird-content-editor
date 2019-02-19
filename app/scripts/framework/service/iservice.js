@@ -8,7 +8,7 @@ org.ekstep.services.iService = Class.extend({
         "headers": {
             "content-type": "application/json",
             "user-id": "content-editor"
-        }
+		}
     },
     getBaseURL: function() {
         return org.ekstep.services.config.baseURL;

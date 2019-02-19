@@ -12,17 +12,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 var corePlugins = [
     "org.ekstep.assessmentbrowser-1.1",
-    "org.ekstep.assetbrowser-1.2",
-    "org.ekstep.colorpicker-1.0",
     "org.ekstep.conceptselector-1.1",
-    "org.ekstep.stage-1.0",
-    "org.ekstep.text-1.2",
-    "org.ekstep.shape-1.0",
-    "org.ekstep.image-1.1",
-    "org.ekstep.audio-1.1",
-    "org.ekstep.hotspot-1.0",
-    "org.ekstep.scribblepad-1.0",
-    "org.ekstep.stageconfig-1.0",
     "org.ekstep.telemetry-1.0",
     "org.ekstep.preview-1.2",
     "org.ekstep.activitybrowser-1.3",
@@ -33,18 +23,17 @@ var corePlugins = [
     "org.ekstep.viewecml-1.0",
     "org.ekstep.utils-1.0",
     "org.ekstep.help-1.0",
-    "org.ekstep.video-1.0",
     "org.ekstep.editorstate-1.0",
     "org.ekstep.contenteditorfunctions-1.2",
     "org.ekstep.keyboardshortcuts-1.0",
-    "org.ekstep.richtext-1.0",
+    "org.ekstep.richtext-1.2",
     "org.ekstep.iterator-1.0",
     "org.ekstep.navigation-1.0"
 ];
 
 let entryFiles = []
 
-function getEntryFiles() {
+function getEntryFiles() {   
     entryFiles = [{
             entryFiles: packagePlugins(),
             outputName: 'coreplugins.js',
@@ -124,7 +113,6 @@ function getVendorCSS() {
 
 
 module.exports = {
-
     entry: getEntryFiles(),
 
     output: {
@@ -172,11 +160,11 @@ module.exports = {
                         loader: 'css-loader',
                         options: {
                             sourceMap: false,
-                            minimize: true,
-                            "preset": "advanced",
-                            discardComments: {
-                                removeAll: true
-                            }
+                            // minimize: true,
+                            // "preset": "advanced",
+                            // discardComments: {
+                            //     removeAll: true
+                            // }
                         }
                     },
                     {

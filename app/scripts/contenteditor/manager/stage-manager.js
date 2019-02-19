@@ -421,8 +421,8 @@ org.ekstep.contenteditor.stageManager = new(Class.extend({
                 }
                 pluginCount++;
             } catch (e) {
-                console.warn('error when instantiating plugin:', pluginId, plugin.data, stageInstance.id, e);
-                org.ekstep.services.telemetryService.error({ "env": "content", "stage": stageInstance.id, "action": "console log error", "err": "plugin instantiation", "type": "PORTAL", "data": "", "severity": "warn" });
+                // console.warn('error when instantiating plugin:', pluginId, plugin.data, stageInstance.id, e);
+                // org.ekstep.services.telemetryService.error({ "env": "content", "stage": stageInstance.id, "action": "console log error", "err": "plugin instantiation", "type": "PORTAL", "data": "", "severity": "warn" });
             }
         });
         if (stageEvents) {
